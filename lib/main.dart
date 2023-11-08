@@ -1,30 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:prova_flutter/login_page.dart';
-import 'package:prova_flutter/shared/constants/theme_constants.dart';
-import 'package:prova_flutter/shared/utilities.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:prova_flutter/app/constants/theme_constants.dart';
+import 'package:prova_flutter/app/modules/login/login_page.dart';
+import 'package:prova_flutter/app/modules/notes/notes_module.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ModularApp(module: AppModule(), child: const AppWidget()));
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class AppModule extends Module {
+  @override
+  void binds(i) {}
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  void routes(r) {
+    r.child("/", child: (context) => const LoginPage());
+    r.module("/notes", module: NotesModule());
+  }
 }
 
-class _MyAppState extends State<MyApp> {
+class AppWidget extends StatelessWidget {
+  const AppWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      title: "Prova Flutter",
       debugShowCheckedModeBanner: false,
-      title: 'ProvaFlutter',
       theme: lightTheme(),
-      darkTheme: darkTheme(),
-      themeMode: ThemeMode.light,
-      // brightness == Brightness.light ? ThemeMode.light : ThemeMode.dark,
-      home: const LoginPage(),
+      // darkTheme: darkTheme(),
+      routerConfig: Modular.routerConfig,
     );
   }
 }

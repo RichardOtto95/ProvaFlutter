@@ -74,15 +74,15 @@ ThemeData lightTheme() => ThemeData(
     ),
     textTheme: const TextTheme(
       bodyMedium: TextStyle(
-        color: primaryLight,
+        color: onBackgroundLight,
         fontSize: 16,
       ),
       bodyLarge: TextStyle(
-        color: primaryLight,
+        color: onBackgroundLight,
         fontSize: 18,
       ),
       bodySmall: TextStyle(
-        color: Colors.black,
+        color: onBackgroundLight,
         fontWeight: FontWeight.w500,
         fontSize: 15,
       ),
@@ -117,7 +117,7 @@ ThemeData lightTheme() => ThemeData(
         fontSize: 18,
       ),
       titleMedium: TextStyle(
-        color: Colors.white,
+        color: primaryLight,
         fontWeight: FontWeight.w500,
         fontSize: 22,
       ),
@@ -155,7 +155,7 @@ const onPrimaryContainerDark = Color.fromARGB(255, 134, 134, 134);
 const onSurfaceVariantDark = Color.fromARGB(255, 56, 56, 56);
 const secondaryContainerDark = Color(0xFFA3A3A3);
 
-const shadowDark = Color(0x28FFFFFF);
+const shadowDark = Color(0x30000000);
 
 ThemeData darkTheme() => ThemeData(
       brightness: Brightness.dark,
@@ -213,11 +213,11 @@ ThemeData darkTheme() => ThemeData(
       ),
       textTheme: const TextTheme(
         bodyMedium: TextStyle(
-          color: primaryDark,
+          color: onBackgroundDark,
           fontSize: 16,
         ),
         bodyLarge: TextStyle(
-          color: primaryDark,
+          color: onBackgroundDark,
           fontSize: 18,
         ),
         bodySmall: TextStyle(
@@ -246,7 +246,7 @@ ThemeData darkTheme() => ThemeData(
           fontSize: 20,
         ),
         labelMedium: TextStyle(
-          color: onSurfaceDark,
+          color: primaryDark,
           fontWeight: FontWeight.w500,
           fontSize: 17,
         ),
@@ -256,7 +256,7 @@ ThemeData darkTheme() => ThemeData(
           fontSize: 18,
         ),
         titleMedium: TextStyle(
-          color: onPrimaryDark,
+          color: primaryDark,
           fontWeight: FontWeight.w500,
           fontSize: 22,
         ),
