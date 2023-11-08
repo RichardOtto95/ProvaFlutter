@@ -28,7 +28,7 @@ class AppWidget extends StatelessWidget {
       title: "Prova Flutter",
       debugShowCheckedModeBanner: false,
       theme: lightTheme(),
-      // darkTheme: darkTheme(),
+      darkTheme: darkTheme(),
       routerConfig: Modular.routerConfig,
     );
   }

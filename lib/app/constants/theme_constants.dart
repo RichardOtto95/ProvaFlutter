@@ -246,22 +246,22 @@ ThemeData darkTheme() => ThemeData(
           fontSize: 20,
         ),
         labelMedium: TextStyle(
-          color: primaryDark,
+          color: onPrimaryDark,
           fontWeight: FontWeight.w500,
           fontSize: 17,
         ),
         titleSmall: TextStyle(
-          color: primaryDark,
+          color: onPrimaryDark,
           fontWeight: FontWeight.w600,
           fontSize: 18,
         ),
         titleMedium: TextStyle(
-          color: primaryDark,
+          color: onPrimaryDark,
           fontWeight: FontWeight.w500,
           fontSize: 22,
         ),
         titleLarge: TextStyle(
-          color: primaryDark,
+          color: onPrimaryDark,
           fontWeight: FontWeight.w500,
           fontSize: 23,
         ),

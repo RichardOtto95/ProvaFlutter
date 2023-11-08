@@ -45,11 +45,17 @@ class NotesPageState extends State<NotesPage> {
           ),
           actions: [
             TextButton(
-              child: const Text("Cancelar"),
+              child: Text(
+                "Cancelar",
+                style: getStyles(context).displayMedium,
+              ),
               onPressed: () => Modular.to.pop(),
             ),
             TextButton(
-              child: const Text("Ok"),
+              child: Text(
+                "Ok",
+                style: getStyles(context).displayMedium,
+              ),
               onPressed: () async {
                 final entry = getLoadEntry();
                 Overlay.of(context).insert(entry);
@@ -229,12 +235,18 @@ class TextTile extends StatelessWidget {
           ),
           actions: [
             TextButton(
-              child: const Text("Cancelar"),
+              child: Text(
+                "Cancelar",
+                style: getStyles(context).displayMedium,
+              ),
               onPressed: () => Modular.to.pop(),
             ),
             TextButton(
               onPressed: conclude,
-              child: const Text("Salvar"),
+              child: Text(
+                "Salvar",
+                style: getStyles(context).displayMedium,
+              ),
             ),
           ],
         );
